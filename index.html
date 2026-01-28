@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LASU CBT Exam</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(270deg, #1e3c72, #2a5298, #0f2027);
+      background-size: 600% 600%;
+      animation: gradientBG 12s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.55);
+      width: 95%;
+      max-width: 700px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    #timer {
+      background: #ff4757;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    #question-box p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    #question-box div {
+      margin: 10px 0;
+      padding: 10px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      background: #1abc9c;
+      border: none;
+      padding: 12px 20px;
+      color: #fff;
+      border-radius: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #16a085;
+    }
+
+    button:disabled {
+      background: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>LASU CBT – BUS 115 / 200</h1>
+      <div id="timer">02:00:00</div>
+    </div>
+
+    <div id="question-box"></div>
+
+    <div class="buttons">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+      <button id="submitBtn" style="display:none;">Submit</button>
+    </div>
+  </div>
+
+  <!-- ORDER MATTERS -->
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
