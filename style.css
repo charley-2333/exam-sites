@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+.container {
+  width: 60%;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+h2 {
+  text-align: center;
+}
+#timer {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  margin-bottom: 20px;
+}
+.option {
+  margin: 10px 0;
+}
+.buttons {
+  margin-top: 20px;
+  text-align: right;
+}
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
